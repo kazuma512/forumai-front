@@ -39,7 +39,7 @@ export const Container = styled.div`
   @media screen and (max-width: 1024px) {
     padding: 40px 50px 20px;
   }
-  
+
   @media screen and (max-width: 768px) {
     padding: 40px 20px 20px;
   }
@@ -190,7 +190,7 @@ export const MobileMenuItem = styled.div<{
   transition: all 0.3s;
 
   color: ${(props) => (props.active ? "#33EDA6" : "white")};
-  
+
   opacity: 0;
   transform: translateX(-100%);
 
@@ -198,11 +198,13 @@ export const MobileMenuItem = styled.div<{
   animation-delay: ${(props) => (props.delay ? props.delay + "s" : `0s`)};
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
-  
+
   z-index: 1;
 `;
 
-export const MobileBackground = styled.div`
+export const MobileBackground = styled.div<{ open: boolean }>`
+  display: ${(props) => (props.open ? "block" : "none")};
+
   position: absolute;
 
   top: 0;

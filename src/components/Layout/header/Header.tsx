@@ -65,7 +65,7 @@ const Header = () => {
               {item.text}
             </S.MobileMenuItem>
           ))}
-          <S.MobileBackground />
+          <S.MobileBackground open={open} />
         </S.MobileMenu>
       </S.MobileMenuLayout>
     </S.Layout>

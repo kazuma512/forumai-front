@@ -7,13 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FAQItem } from "@/types/components";
 
 // styled
-import {
-  Layout,
-  ItemContainer,
-  TitleContainer,
-  Title,
-  IconContainer,
-} from "./styled";
+import * as S from "./styled";
 
 //-----------------------------------------------------------------
 
@@ -21,10 +15,10 @@ const CustomFAQ: React.FC<{ data: FAQItem[] }> = ({ data }) => {
   const [open, setOpen] = useState(0);
 
   return (
-    <Layout>
+    <S.Layout>
       {data.map((item, index) => (
-        <ItemContainer key={index}>
-          <TitleContainer
+        <S.ItemContainer key={index}>
+          <S.TitleContainer
             onClick={() => {
               if (index + 1 === open) {
                 setOpen(0);
@@ -33,12 +27,14 @@ const CustomFAQ: React.FC<{ data: FAQItem[] }> = ({ data }) => {
               }
             }}
           >
-            <Title>{item.title}</Title>
-            <IconContainer active={index + 1 === open}>&#x2B;</IconContainer>
-          </TitleContainer>
+            <S.Title>{item.title}</S.Title>
+            <S.IconContainer active={index + 1 === open}>
+              &#x2B;
+            </S.IconContainer>
+          </S.TitleContainer>
           <AnimatePresence initial={false}>
             {open === index + 1 && (
-              <motion.section
+              <S.Section
                 initial="collapsed"
                 animate="open"
                 exit="collapsed"
@@ -47,21 +43,14 @@ const CustomFAQ: React.FC<{ data: FAQItem[] }> = ({ data }) => {
                   collapsed: { opacity: 0, height: 0, marginTop: "0px" },
                 }}
                 transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-                style={{
-                  fontFamily: "Poppins",
-                  fontSize: "18px",
-                  fontWeight: "400",
-                  lineHeight: "1.3",
-                  textAlign: "left",
-                }}
               >
                 {item.content}
-              </motion.section>
+              </S.Section>
             )}
           </AnimatePresence>
-        </ItemContainer>
+        </S.ItemContainer>
       ))}
-    </Layout>
+    </S.Layout>
   );
 };
 

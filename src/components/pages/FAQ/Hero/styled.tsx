@@ -18,6 +18,8 @@ export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  border: 3px solid red;
 `;
 
 export const Container = styled.div`
@@ -32,6 +34,14 @@ export const Container = styled.div`
   align-items: center;
 
   z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0px 50px;
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 0px 20px;
+  }
 `;
 
 export const MainTitle = styled.div`
@@ -42,6 +52,21 @@ export const MainTitle = styled.div`
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    font-size: 30px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 26px;
+  }
 `;
 
 export const MainDesc = styled.div`
@@ -54,6 +79,21 @@ export const MainDesc = styled.div`
   text-align: center;
 
   margin-top: 24px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 600px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 export const FAQContainer = styled.div`
@@ -77,6 +117,17 @@ export const Background1 = styled.div`
   filter: blur(167px);
 
   background: #33eda6;
+
+  @media screen and (max-width: 1024px) {
+    bottom: -200px;
+    right: -200px;
+  }
+  @media screen and (max-width: 768px) {
+    right: -300px;
+  }
+  @media screen and (max-width: 425px) {
+    right: -400px;
+  }
 `;
 
 export const Background2 = styled.div`
@@ -93,4 +144,13 @@ export const Background2 = styled.div`
   filter: blur(167px);
 
   background: #33eda6;
+
+  @media screen and (max-width: 1024px) {
+    top: -200px;
+    left: -200px;
+  }
+  @media screen and (max-width: 768px) {
+    top: -300px;
+    left: -300px;
+  }
 `;
