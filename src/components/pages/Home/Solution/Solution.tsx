@@ -21,6 +21,7 @@ const Solution = () => {
   return (
     <S.Layout>
       <S.Container>
+        <S.MobileTitle>The One Stop AI Solution</S.MobileTitle>
         <S.ImageContainer>
           <Image src="/assets/home-solution-main.png" alt="No Solution" fill />
         </S.ImageContainer>

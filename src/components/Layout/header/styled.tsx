@@ -213,7 +213,6 @@ export const MobileBackground = styled.div<{ open: boolean }>`
   width: 1100px;
   height: 1100px;
 
-  border: 1px solid red;
   opacity: 0.08;
 
   border-radius: 50%;

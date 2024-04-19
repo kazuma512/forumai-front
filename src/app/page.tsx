@@ -1,10 +1,12 @@
-import Image from "next/image";
-
 // styled
 import * as S from "./styled";
 
 // sections
-import { Hero, Solution, Gaming } from "@/components/pages/Home";
+import {
+  Hero,
+  Solution,
+  Gaming,
+} from "@/components/pages/Home";
 
 //--------------------------------------------------
 

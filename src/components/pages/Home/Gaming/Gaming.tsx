@@ -11,7 +11,7 @@ import DetailItem from "@/components/custom/DetailItem/DetailItem";
 
 //---------------------------------------------------------------------
 
-const Gaming = () => {
+const Solution = () => {
   const [detail, setDetail] = useState([
     { num: "24K+", title: "Happy Customers" },
     { num: "320K+", title: "Models Supported" },
@@ -23,6 +23,13 @@ const Gaming = () => {
       <S.Container>
         <S.Main>
           <S.Title>For Web3 gaming and beyond</S.Title>
+          <S.MobileImageContainer>
+            <Image
+              src="/assets/home-solution-main.png"
+              alt="No Solution"
+              fill
+            />
+          </S.MobileImageContainer>
           <S.Desc>
             Web3 gaming requires low-latency for real-time interaction and
             seamless play, which ForumAI supports with decentralized nodes for
@@ -46,4 +53,4 @@ const Gaming = () => {
   );
 };
 
-export default Gaming;
+export default Solution;

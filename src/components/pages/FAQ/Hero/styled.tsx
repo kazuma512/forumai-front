@@ -18,8 +18,6 @@ export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border: 3px solid red;
 `;
 
 export const Container = styled.div`
@@ -60,9 +58,6 @@ export const MainTitle = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     font-size: 30px;
-  }
-  @media screen and (max-width: 425px) {
-    font-size: 28px;
   }
   @media screen and (max-width: 375px) {
     font-size: 26px;
