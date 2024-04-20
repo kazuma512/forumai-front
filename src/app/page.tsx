@@ -6,6 +6,10 @@ import {
   Hero,
   Solution,
   Gaming,
+  Why,
+  Our,
+  Revolutionize,
+  Chat,
 } from "@/components/pages/Home";
 
 //--------------------------------------------------
@@ -16,6 +20,10 @@ export default function Home() {
       <Hero />
       <Solution />
       <Gaming />
+      <Why />
+      <Our />
+      <Revolutionize />
+      <Chat />
     </S.Layout>
   );
 }
